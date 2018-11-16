@@ -25,28 +25,34 @@ public class Employee {
 	private String email;
 	@Column(nullable = false)
 	private String password;
-	private int age;
 	private Long phoneNo;
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private Sex sex;
-	private String designation;
+	private String department;
+	@Enumerated(EnumType.STRING)
+	private Designation designation;
+	private Long managerId;
+	private int leaveBalance;
 	
 	public Employee() {
 		super();
 	}
+	
 
-	public Employee(Long id, String name, String email, String password, int age, Long phoneNo, Sex sex,
-			String designation) {
+	public Employee(Long id, String name, String email, String password, Long phoneNo, Sex sex, String department,
+			Designation designation, Long managerId, int leaveBalance) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
-		this.age = age;
 		this.phoneNo = phoneNo;
 		this.sex = sex;
+		this.department = department;
 		this.designation = designation;
+		this.managerId = managerId;
+		this.leaveBalance = leaveBalance;
 	}
 
 	public Long getId() {
@@ -81,14 +87,6 @@ public class Employee {
 		this.password = password;
 	}
 
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
 	public Long getPhoneNo() {
 		return phoneNo;
 	}
@@ -105,18 +103,50 @@ public class Employee {
 		this.sex = sex;
 	}
 
-	public String getDesignation() {
+	public Designation getDesignation() {
 		return designation;
 	}
 
-	public void setDesignation(String designation) {
+
+	public void setDesignation(Designation designation) {
 		this.designation = designation;
+	}
+
+
+	public Long getManagerId() {
+		return managerId;
+	}
+
+
+	public void setManagerId(Long managerId) {
+		this.managerId = managerId;
+	}
+
+
+	public int getLeaveBalance() {
+		return leaveBalance;
+	}
+
+
+	public void setLeaveBalance(int leaveBalance) {
+		this.leaveBalance = leaveBalance;
+	}
+
+
+	public String getDepartment() {
+		return department;
+	}
+
+
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", age=" + age
-				+ ", phoneNo=" + phoneNo + ", sex=" + sex + ", designation=" + designation + "]";
+		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", phoneNo="
+				+ phoneNo + ", sex=" + sex + ", department=" + department + ", designation=" + designation
+				+ ", managerId=" + managerId + ", leaveBalance=" + leaveBalance + "]";
 	}
-	
+
 }
