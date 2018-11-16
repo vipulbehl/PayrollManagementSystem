@@ -14,5 +14,9 @@
 	<a href="logout"> here </a> 
 	
 	to logout.
+	
+	<br><br><br><br><br><br>
+	<a href="leave">Leave Apply</a>
+	
 </body>
 </html>

@@ -16,4 +16,7 @@ public interface EmployeeRepository extends CrudRepository<Employee,Long>{
 	@Query("select e from Employee e where e.email=?1")
 	public Employee getEmployeeByEmail(@PathParam(value = "email") String email);
 	
+	@Query("select e from Employee e where e.id=?1")
+	public Employee getEmployeeById(@PathParam(value="id") Long id);
+	
 }

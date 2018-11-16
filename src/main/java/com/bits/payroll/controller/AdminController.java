@@ -53,7 +53,7 @@ public class AdminController {
 		System.out.println(employee);
 		if(!service.registerEmployee(employee))
 			model.addAttribute("err", "User already exists");
-		return "home";
+		return "adminDashboard";
 	}
 	
 	@RequestMapping(value="updateEmployee", method = RequestMethod.POST)

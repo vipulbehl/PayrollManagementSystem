@@ -21,19 +21,36 @@ public class Leave {
 	private Long id;
 	private Date startDate;
 	private Date endDate;
+	private int numberLeaves;
+	public int getNumberLeaves() {
+		return numberLeaves;
+	}
+	public void setNumberLeaves(int numberLeaves) {
+		this.numberLeaves = numberLeaves;
+	}
 	@ManyToOne
 	private Employee employee;
 	
 	public Leave() {
 		super();
 	}
-	public Leave(Long id, Date startDate, Date endDate, Employee employee) {
+	public Leave(Long id, Date startDate, Date endDate, Employee employee, int numberLeaves) {
 		super();
 		this.id = id;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.employee = employee;
+		this.numberLeaves=numberLeaves;
 	}
+	
+	public Leave( Date startDate, Date endDate, int numberLeaves) {
+		super();
+		
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.numberLeaves=numberLeaves;
+	}
+	
 	public Long getId() {
 		return id;
 	}
