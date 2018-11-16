@@ -41,7 +41,7 @@ public class LoginController {
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	public String logout(HttpSession session, Model model) {
 	  session.invalidate();
-	  if(model.containsAttribute("employeeId")) {
+	  if(model.containsAttribute("employeeId") || model.containsAttribute("employeeName")) {
 		  model.asMap().remove("employeeId");
 		  model.asMap().remove("employeeName");
 	  }

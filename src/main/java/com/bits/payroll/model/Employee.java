@@ -39,6 +39,19 @@ public class Employee {
 		super();
 	}
 	
+	public Employee(String name, String email, String password, Long phoneNo, Sex sex, String department,
+			Designation designation, Long managerId, int leaveBalance) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.phoneNo = phoneNo;
+		this.sex = sex;
+		this.department = department;
+		this.designation = designation;
+		this.managerId = managerId;
+		this.leaveBalance = leaveBalance;
+	}
 
 	public Employee(Long id, String name, String email, String password, Long phoneNo, Sex sex, String department,
 			Designation designation, Long managerId, int leaveBalance) {

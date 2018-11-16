@@ -16,5 +16,16 @@
 		Password : <input type="password" name="password">
 		<input type="submit" value="login">
 	</form>
+	
+	
+	<br><br><br><br>
+	
+	<%--Admin Login Form --%>
+	<form action="adminDashboard" method="POST">
+		Email : <input type="email" name="email"> <br>
+		Password : <input type="password" name="password">
+		<input type="submit" value="Login">
+	</form>
+	
 </body>
 </html>
