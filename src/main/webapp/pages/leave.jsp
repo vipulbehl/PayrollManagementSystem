@@ -10,9 +10,7 @@
 	<form action="leave" method="POST">
 		<input type="date" name="startDate">
 		<input type="date" name="endDate">
-		<input name="numberLeaves">
 		<input type="submit" value="Apply">
 	</form>
-	<p>${err}</p>
 </body>
 </html>

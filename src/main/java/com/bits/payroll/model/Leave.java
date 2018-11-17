@@ -1,7 +1,5 @@
 package com.bits.payroll.model;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -19,8 +17,8 @@ public class Leave {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private Date startDate;
-	private Date endDate;
+	private String startDate;
+	private String endDate;
 	private int numberLeaves;
 	public int getNumberLeaves() {
 		return numberLeaves;
@@ -34,7 +32,7 @@ public class Leave {
 	public Leave() {
 		super();
 	}
-	public Leave(Long id, Date startDate, Date endDate, Employee employee, int numberLeaves) {
+	public Leave(Long id, String startDate, String endDate, int numberLeaves, Employee employee) {
 		super();
 		this.id = id;
 		this.startDate = startDate;
@@ -43,7 +41,15 @@ public class Leave {
 		this.numberLeaves=numberLeaves;
 	}
 	
-	public Leave( Date startDate, Date endDate, int numberLeaves) {
+	public Leave(String startDate, String endDate, int numberLeaves, Employee employee) {
+		super();
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.numberLeaves = numberLeaves;
+		this.employee = employee;
+	}
+	
+	public Leave( String startDate, String endDate, int numberLeaves) {
 		super();
 		
 		this.startDate = startDate;
@@ -57,16 +63,16 @@ public class Leave {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Date getStartDate() {
+	public String getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Date startDate) {
+	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
-	public Date getEndDate() {
+	public String getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 	public Employee getEmployee() {
