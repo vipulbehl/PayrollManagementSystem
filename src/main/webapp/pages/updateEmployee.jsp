@@ -33,5 +33,13 @@
 		
 		<input type="submit" name="submit" value="Update Employee">
 	</form>
+	
+	<form action="addAttendance" method="POST">
+		Month <input type="number" name="month">
+		Year <input type="number" name="year">
+		Days Worked <input type="number" name="daysWorked">
+		<input type="submit" value="Add">
+	</form>
+	
 </body>
 </html>

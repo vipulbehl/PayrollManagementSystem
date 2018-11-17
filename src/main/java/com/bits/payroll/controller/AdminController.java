@@ -1,6 +1,7 @@
 package com.bits.payroll.controller;
 
 import java.security.NoSuchAlgorithmException;
+import java.time.Month;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,13 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.bits.payroll.model.Attendance;
 import com.bits.payroll.model.Designation;
 import com.bits.payroll.model.Employee;
 import com.bits.payroll.model.Sex;
 import com.bits.payroll.service.AdminService;
 
 @Controller
-@SessionAttributes(value="employeeName")
+@SessionAttributes(value= {"employeeName","employeeEmail"})
 public class AdminController {
 	
 	@Autowired
@@ -60,6 +62,8 @@ public class AdminController {
 	public String updateEmployee(ModelMap model, @RequestParam String email) {
 		Employee emp = service.getEmployeeByEmail(email);
 		model.addAttribute("emp",emp);
+		//setting a session variable for employee email
+		model.addAttribute("employeeEmail", email);
 		return "updateEmployee";
 	}
 	
@@ -68,6 +72,16 @@ public class AdminController {
 		Employee employee = new Employee(name,email,password,phoneNo,Sex.valueOf(sex),department,Designation.valueOf(designation),managerId,leaveBalance);
 		System.out.println(employee);	
 		service.updateEmployee(employee);
+		return "adminDashboard";
+	}
+	
+	@RequestMapping(value="addAttendance", method = RequestMethod.POST)
+	public String addAttendance(ModelMap model,@RequestParam int month,@RequestParam int year,@RequestParam int daysWorked) {
+		Employee emp = service.getEmployeeByEmail((String)model.get("employeeEmail"));
+		System.out.println(emp);
+		Month mon = Month.of(month);
+		Attendance attendance = new Attendance(mon,year,daysWorked,emp);
+		service.addAttendance(attendance);
 		return "adminDashboard";
 	}
 	
