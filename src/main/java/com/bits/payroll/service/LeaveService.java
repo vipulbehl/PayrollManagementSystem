@@ -3,6 +3,7 @@ package com.bits.payroll.service;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,6 +44,10 @@ public class LeaveService {
 
 	public Employee getEmployeeById(Long id) {
 		return employeeRepository.getEmployeeById(id);
+	}
+	
+	public List<Leave> getLeaveTransactions(Employee emp) {
+		return repository.getLeaveTransactions(emp);
 	}
 
 	public int calculateLeaveDays(String startDate, String endDate) {

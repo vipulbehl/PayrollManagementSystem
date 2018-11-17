@@ -18,5 +18,8 @@
 	<br><br><br><br><br><br>
 	<a href="leave">Leave Apply</a>
 	
+	<br><br><br><br><br><br>
+	<a href="leaveTransactions">Show leave Transactions</a>
+	
 </body>
 </html>

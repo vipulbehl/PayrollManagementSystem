@@ -25,8 +25,6 @@ public class LeaveController {
 		System.out.println(endDate);
 		
 		Long empId = (Long)model.get("employeeId");
-		System.out.println(empId);
-		
 		Employee employee = leaveService.getEmployeeById(empId);
 		
 		if(leaveService.applyLeave(startDate,endDate,employee))
@@ -39,6 +37,14 @@ public class LeaveController {
 	@RequestMapping(value="leave", method=RequestMethod.GET)
 	public String showLeavePage() {
 		return "leave";
+	}
+	
+	@RequestMapping(value="leaveTransactions", method=RequestMethod.GET)
+	public String showLeaveTransactions(ModelMap model) {
+		Long empId = (Long)model.get("employeeId");
+		Employee employee = leaveService.getEmployeeById(empId);
+		model.put("leaveT",leaveService.getLeaveTransactions(employee));
+		return "leaveTransactions";
 	}
 
 }
