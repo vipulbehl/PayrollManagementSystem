@@ -10,7 +10,7 @@
 
 <form action="salary" method="POST">
 		Month <input type="number" name="month"> <br>
-		<input type="submit" value="login">
+		<input type="submit" value="getsalary">
 	</form>
 
 </body>

@@ -23,11 +23,11 @@ public class Salary {
 	private Long id;
 	private Month month;
 	private int basic;
-	private Year year;
-	public Year getYear() {
+	private int year;
+	public int getYear() {
 		return year;
 	}
-	public void setYear(Year year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 	private int pf;
@@ -40,7 +40,7 @@ public class Salary {
 	public Salary() {
 		super();
 	}
-	public Salary(Long id, Month month, int basic, int pf, int da, int hra, int ta, Employee employee, Year year) {
+	public Salary(Long id, Month month, int basic, int pf, int da, int hra, int ta, Employee employee, int year) {
 		super();
 		this.id = id;
 		this.month = month;

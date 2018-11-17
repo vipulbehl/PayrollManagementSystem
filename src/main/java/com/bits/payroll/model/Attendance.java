@@ -21,11 +21,11 @@ public class Attendance {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private Month month;
-	private Year year;
-	public Year getYear() {
+	private int year;
+	public int getYear() {
 		return year;
 	}
-	public void setYear(Year year) {
+	public void setYear(int year) {
 		this.year = year;
 	}
 	private int daysWorked;
@@ -35,7 +35,7 @@ public class Attendance {
 	public Attendance() {
 		super();
 	}
-	public Attendance(Long id, Month month, int daysWorked, Employee employee,Year year) {
+	public Attendance(Long id, Month month, int daysWorked, Employee employee,int year) {
 		super();
 		this.id = id;
 		this.month = month;
