@@ -29,7 +29,8 @@ public class LoginController {
 		
         if (employee==null) {
         	model.addAttribute("err", "Invalid User Credentials!! Please type the credentials again");
-        	return "home";
+        	//return "home";
+        	return "login2";
         }
         else {
         	model.addAttribute("employeeName", employee.getName());

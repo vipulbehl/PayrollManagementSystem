@@ -10,4 +10,10 @@ public class HomeController {
 	public String showHomePage() {
 		return "home";
 	}
+	
+	
+	@RequestMapping(value="login2", method = RequestMethod.GET)
+	public String showLoginPage() {
+		return "login2";
+	}
 }
