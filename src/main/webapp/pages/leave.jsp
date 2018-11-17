@@ -13,5 +13,6 @@
 		<input name="numberLeaves">
 		<input type="submit" value="Apply">
 	</form>
+	<p>${err}</p>
 </body>
 </html>
