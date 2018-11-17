@@ -1,9 +1,8 @@
 package com.bits.payroll.service;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,19 +47,12 @@ public class LeaveService {
 
 	public int calculateLeaveDays(String startDate, String endDate) {
 		
-		SimpleDateFormat sf = new SimpleDateFormat("dd-MM-yyyy");
-		
-		Date start=null,end=null;
-		try {
-			start = sf.parse(startDate);
-			end = sf.parse(endDate);
-			
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		
-		long diff = start.getTime() - end.getTime();
-	    return (int)TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+		//Here The LocalDate instance we're making and parsing the startDate format it to ISO i.e yyyy-MM-dd format
+		LocalDate d1 = LocalDate.parse(startDate, DateTimeFormatter.ISO_LOCAL_DATE);
+		LocalDate d2 = LocalDate.parse(endDate, DateTimeFormatter.ISO_LOCAL_DATE);
+		Duration diff = Duration.between(d1.atStartOfDay(), d2.atStartOfDay());
+		long diffDays = diff.toDays();
+		return (int)diffDays;
 		
 	}
 }
