@@ -16,4 +16,10 @@ public class HomeController {
 	public String showLoginPage() {
 		return "login2";
 	}
+	
+	@RequestMapping(value="tax", method = RequestMethod.GET)
+	public String showTaxPage() {
+		return "tax";
+	}
+	
 }

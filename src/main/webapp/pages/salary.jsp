@@ -15,6 +15,13 @@
 		<input type="submit" value="getsalary">
 </form>
 	
+	<br><br><br>
+	
+	<form action="getTax" method="POST">
+		Year: <input type="number" name="year"> <br>
+		<input type="submit" value="GenereateAnnualTaxReport">
+</form>
+	
 	
 	${salary}
 	

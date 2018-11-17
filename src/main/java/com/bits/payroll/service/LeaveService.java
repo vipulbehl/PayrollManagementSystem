@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.bits.payroll.model.Employee;
 import com.bits.payroll.model.Leave;
+import com.bits.payroll.model.Salary;
 import com.bits.payroll.repository.EmployeeRepository;
 import com.bits.payroll.repository.LeaveRepository;
 
@@ -47,7 +48,7 @@ public class LeaveService {
 	}
 	
 	public List<Leave> getLeaveTransactions(Employee emp) {
-		return repository.getLeaveTransactions(emp);
+		return  repository.getLeaveTransactions(emp);
 	}
 
 	public int calculateLeaveDays(String startDate, String endDate) {
