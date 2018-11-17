@@ -21,24 +21,6 @@ public class TaxService {
 		return  repository.getYearlySalary(employee,year);
 		
 	}
-	
-	/*public float getTax(List<Salary> salary, int year)
-	{
-		
-		Employee employee = service.getEmployeeById((Long)model.get("employeeId"));
-		salary=getSalaryByYear() 
-		
-		float annualSalary = 0,tax=0;
-		for(Salary e : salary)
-		{		
-			annualSalary+= (e.getBasic() + e.getDa() +e.getHra() + e.getTa() - e.getPf());
-		}
-		System.out.println("Annaul salary "+annualSalary);
-		 
-		for(int i =0;i<=)
-		
-		
-	}*/
 
 	public Employee getEmployeeById(Long id) {
 		return empRepository.getEmployeeById(id);
