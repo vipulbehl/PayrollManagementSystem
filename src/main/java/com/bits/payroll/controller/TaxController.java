@@ -72,5 +72,14 @@ public class TaxController {
 		
 	}
 	
+	@RequestMapping(value="tax", method = RequestMethod.GET)
+	public String showTaxPage(ModelMap model) {
+		if(model.get("employeeId") == null)
+			return "home";
+		else
+			return "tax";
+		
+	}
+	
 	
 }

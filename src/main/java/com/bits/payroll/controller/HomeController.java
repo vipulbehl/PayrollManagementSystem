@@ -17,9 +17,9 @@ public class HomeController {
 		return "login2";
 	}
 	
-	@RequestMapping(value="tax", method = RequestMethod.GET)
-	public String showTaxPage() {
-		return "tax";
+	@RequestMapping(value="panels-wells", method = RequestMethod.GET)
+	public String showPanelPage() {
+		return "panels-wells";
 	}
 	
 }
