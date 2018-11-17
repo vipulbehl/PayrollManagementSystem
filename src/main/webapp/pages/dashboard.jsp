@@ -28,5 +28,8 @@
 	<br><br><br><br><br><br>
 	<a href="leaveTransactions">Show leave Transactions</a>
 	
+	<br><br><br><br><br><br>
+	<a href="viewSubordinates">View Sub-ordinates</a>
+	
 </body>
 </html>
