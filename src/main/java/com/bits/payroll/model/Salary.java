@@ -1,6 +1,7 @@
 package com.bits.payroll.model;
 
 import java.time.Month;
+import java.time.Year;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -22,6 +23,13 @@ public class Salary {
 	private Long id;
 	private Month month;
 	private int basic;
+	private Year year;
+	public Year getYear() {
+		return year;
+	}
+	public void setYear(Year year) {
+		this.year = year;
+	}
 	private int pf;
 	private int da;
 	private int hra;
@@ -32,7 +40,7 @@ public class Salary {
 	public Salary() {
 		super();
 	}
-	public Salary(Long id, Month month, int basic, int pf, int da, int hra, int ta, Employee employee) {
+	public Salary(Long id, Month month, int basic, int pf, int da, int hra, int ta, Employee employee, Year year) {
 		super();
 		this.id = id;
 		this.month = month;
@@ -42,6 +50,7 @@ public class Salary {
 		this.hra = hra;
 		this.ta = ta;
 		this.employee = employee;
+		this.year=year;
 	}
 	public Long getId() {
 		return id;

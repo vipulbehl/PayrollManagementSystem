@@ -17,6 +17,13 @@
 	
 	<br><br><br><br><br><br>
 	<a href="leave">Leave Apply</a>
+	<br><br><br>
+	<a href="salary">View Your Salary</a>
+	
+	<br><br><br><br>
+	
+	<a href="tax">View Your Tax Report</a>
+	
 	
 	<br><br><br><br><br><br>
 	<a href="leaveTransactions">Show leave Transactions</a>

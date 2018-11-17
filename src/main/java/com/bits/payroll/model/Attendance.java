@@ -1,6 +1,7 @@
 package com.bits.payroll.model;
 
 import java.time.Month;
+import java.time.Year;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -20,6 +21,13 @@ public class Attendance {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private Month month;
+	private Year year;
+	public Year getYear() {
+		return year;
+	}
+	public void setYear(Year year) {
+		this.year = year;
+	}
 	private int daysWorked;
 	@ManyToOne
 	private Employee employee;
@@ -27,12 +35,13 @@ public class Attendance {
 	public Attendance() {
 		super();
 	}
-	public Attendance(Long id, Month month, int daysWorked, Employee employee) {
+	public Attendance(Long id, Month month, int daysWorked, Employee employee,Year year) {
 		super();
 		this.id = id;
 		this.month = month;
 		this.daysWorked = daysWorked;
 		this.employee = employee;
+		this.year=year;
 	}
 	public Long getId() {
 		return id;
