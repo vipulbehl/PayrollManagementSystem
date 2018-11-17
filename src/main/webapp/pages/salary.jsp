@@ -8,12 +8,12 @@
 </head>
 <body>
 
-<form action="salary" method="POST">
+<form action="getSalary" method="POST">
 		Month: <input type="number" name="month"> <br>
-		Year: <input type="number" name="month"> <br>
+		Year: <input type="number" name="year"> <br>
 		
 		<input type="submit" value="getsalary">
-	</form>
+</form>
 	
 	
 	${salary}
