@@ -46,6 +46,6 @@ public class LoginController {
 		  model.asMap().remove("employeeId");
 		  model.asMap().remove("employeeName");
 	  }
-	  return "redirect:home?act=lo";
+	  return "redirect:login2?act=lo";
 	}
 }
