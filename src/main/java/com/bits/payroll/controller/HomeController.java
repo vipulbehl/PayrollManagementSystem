@@ -17,9 +17,9 @@ public class HomeController {
 		return "login2";
 	}
 	
-	@RequestMapping(value="panels-wells", method = RequestMethod.GET)
+	/*@RequestMapping(value="panels-wells", method = RequestMethod.GET)
 	public String showPanelPage() {
 		return "panels-wells";
-	}
+	}*/
 	
 }

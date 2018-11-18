@@ -18,11 +18,11 @@
 	<br><br><br><br><br><br>
 	<a href="leave">Leave Apply</a>
 	<br><br><br>
-	<a href="salary">View Your Salary</a>
+	<a href="salary">View Your Salary And Tax Report</a>
 	
 	<br><br><br><br>
 	
-	<a href="tax"> View Your Tax Report :  Bhai Vipul Bas yahin tune meri maar li iske karan 1 ghanta gya h mera Tax Report ke liye salary wale page pe jaa</a>
+	<a href="tax"> View Your Tax Report :</a>
 	
 	
 	<br><br><br><br><br><br>

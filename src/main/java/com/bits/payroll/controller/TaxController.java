@@ -68,7 +68,7 @@ public class TaxController {
 		else
 			model.addAttribute("status", "Tu toh Ameer hai Launde Kya baat!!!");
 		
-		return "tax";
+		return "panels-wells";
 		
 	}
 	
@@ -80,6 +80,13 @@ public class TaxController {
 			return "tax";
 		
 	}
-	
+	@RequestMapping(value="panel-wells", method = RequestMethod.GET)
+	public String showTaxPage2(ModelMap model) {
+		if(model.get("employeeId") == null)
+			return "home";
+		else
+			return "panel-wells";
+		
+	}
 	
 }
