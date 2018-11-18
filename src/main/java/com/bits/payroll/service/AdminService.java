@@ -11,7 +11,7 @@ import com.bits.payroll.model.Employee;
 import com.bits.payroll.model.Salary;
 import com.bits.payroll.repository.AttendanceRepository;
 import com.bits.payroll.repository.EmployeeRepository;
-import com.bits.payroll.repository.SalaryRepository1;
+import com.bits.payroll.repository.SalaryRepository;
 
 @Service
 public class AdminService {
@@ -23,7 +23,7 @@ public class AdminService {
 	AttendanceRepository attendanceRepository;
 	
 	@Autowired
-	SalaryRepository1 salaryRepository;
+	SalaryRepository salaryRepository;
 	
 	public boolean loginAdmin(String email,String password) {
 		if(email.equals("admin@gmail.com") && password.equals("123456"))

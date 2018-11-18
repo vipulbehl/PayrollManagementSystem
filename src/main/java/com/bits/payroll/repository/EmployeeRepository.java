@@ -1,5 +1,7 @@
 package com.bits.payroll.repository;
 
+import java.util.List;
+
 import javax.websocket.server.PathParam;
 
 import org.springframework.data.jpa.repository.Query;
@@ -18,5 +20,8 @@ public interface EmployeeRepository extends CrudRepository<Employee,Long>{
 	
 	@Query("select e from Employee e where e.id=?1")
 	public Employee getEmployeeById(@PathParam(value="id") Long id);
+	
+	@Query("select e from Employee e where e.managerId=?1")
+	public List<Employee> getSubordinates(@PathParam(value="id")Long id);
 	
 }
