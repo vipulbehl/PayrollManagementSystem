@@ -35,7 +35,7 @@ public class LoginController {
         else {
         	model.addAttribute("employeeName", employee.getName());
         	model.addAttribute("employeeId", employee.getId());
-        	return "dashboard";
+        	return "EmployeeDashboard";
         }
 	}
 	

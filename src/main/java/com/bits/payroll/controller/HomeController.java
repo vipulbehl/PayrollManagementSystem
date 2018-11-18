@@ -1,6 +1,7 @@
 package com.bits.payroll.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -17,9 +18,18 @@ public class HomeController {
 		return "login2";
 	}
 	
-	/*@RequestMapping(value="panels-wells", method = RequestMethod.GET)
+	/*@RequestMapping(value="EmployeeDashboard", method = RequestMethod.GET)
 	public String showPanelPage() {
-		return "panels-wells";
+		return "EmployeeDashboard";
 	}*/
+	
+	@RequestMapping(value="EmployeeDashboard", method = RequestMethod.GET)
+	public String showEmployeeDashboard(ModelMap model) {
+		if(model.get("employeeId") == null)
+			return "login2";
+		else
+			return "EmployeeDashboard";
+		
+	}
 	
 }
