@@ -33,9 +33,7 @@
               <a class="nav-link" href="logout">Logout
                 <span class="sr-only">(current)</span>
               </a>
-            </li>
-            
-            
+            </li>   
           </ul>
         </div>
       </div>
