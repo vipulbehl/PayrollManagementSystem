@@ -13,7 +13,7 @@ import com.bits.payroll.model.Employee;
 import com.bits.payroll.service.LeaveService;
 
 @Controller
-@SessionAttributes(value= {"employeeName","employeeId"})
+@SessionAttributes(value= {"employeeName","employeeEmail","employeeId"})
 public class LeaveController {
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class LeaveController {
 		Employee employee = leaveService.getEmployeeById(empId);
 		
 		if(leaveService.applyLeave(startDate,endDate,employee))
-			return "dashboard";
+			return "EmployeeDashboard";
 		else
 			return "leave";
 		

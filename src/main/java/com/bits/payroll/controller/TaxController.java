@@ -15,7 +15,7 @@ import com.bits.payroll.model.Salary;
 import com.bits.payroll.service.TaxService;
 
 @Controller
-@SessionAttributes(value= {"employeeName","employeeId"})
+@SessionAttributes(value= {"employeeName","employeeEmail","employeeId"})
 public class TaxController {
 	@Autowired
 	TaxService service;
@@ -29,16 +29,15 @@ public class TaxController {
 		List<Salary> salary=service.getYearlySalary(employee, year);
 		
 		double annualSalary = 0.0;
-		//Yahan Employee ki annual Salary generate ho rhi h.
-		for(Salary e : salary)
-		{		
+		//Generating employees annual salary
+		for(Salary e : salary) {		
 			annualSalary+= (e.getBasic() + e.getDa() +e.getHra() + e.getTa() - e.getPf());
 		}
 		
 		model.addAttribute("annualSalary", annualSalary);
 		System.out.println("Annaul salary "+annualSalary);
 		
-		//Yahan Par tax calculate kar raha hun different tax brackets hain uske hisab se total tax calculate ho rha h
+		//Calculating tax based on tax brackets
 		 
 		double[] maxAmount = {0,100000,300000,500000,800000,2000000};
 		double[] taxRate = {0,0.10,0.15,0.25,0.28,0.33};
@@ -60,15 +59,15 @@ public class TaxController {
 		
 		model.addAttribute("totalTax", totalTax);
 		
-		//Yeh Bakchodi Employee ke aukaat ke hisab se plan show karne ke liye.
+		//Showing tax benefit plans
 		if(salaryLeft<=300000)
-			model.addAttribute("status", "Tu Gareeb hai saale!!");
+			model.addAttribute("status", "Low Quality Plan");
 		else if(salaryLeft>300000 && salaryLeft<=800000)
-			model.addAttribute("status", "Tu middle class hai aur kaam kar!!");
+			model.addAttribute("status", "Medium Quality Plan");
 		else
-			model.addAttribute("status", "Tu toh Ameer hai Launde Kya baat!!!");
+			model.addAttribute("status", "High Quality Plan");
 		
-		return "panels-wells";
+		return "tax";
 		
 	}
 	
@@ -80,13 +79,13 @@ public class TaxController {
 			return "tax";
 		
 	}
-	@RequestMapping(value="panel-wells", method = RequestMethod.GET)
+	/*@RequestMapping(value="tax", method = RequestMethod.GET)
 	public String showTaxPage2(ModelMap model) {
-		if(model.get("employeeId") == null)
-			return "login2";
+		if(model.get("employeeName") == null)
+			return "home";
 		else
-			return "panel-wells";
+			return "tax";
 		
-	}
+	}*/
 	
 }

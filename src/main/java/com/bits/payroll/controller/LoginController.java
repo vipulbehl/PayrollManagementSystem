@@ -16,7 +16,7 @@ import com.bits.payroll.model.Employee;
 import com.bits.payroll.service.LoginService;
 
 @Controller
-@SessionAttributes(value= {"employeeName","employeeId"})
+@SessionAttributes(value= {"employeeName","employeeEmail","employeeId"})
 public class LoginController {
 	@Autowired
 	LoginService service;
@@ -29,12 +29,12 @@ public class LoginController {
 		
         if (employee==null) {
         	model.addAttribute("err", "Invalid User Credentials!! Please type the credentials again");
-        	//return "home";
         	return "home";
         }
         else {
         	model.addAttribute("employeeName", employee.getName());
         	model.addAttribute("employeeId", employee.getId());
+        	model.addAttribute("employeeEmail", employee.getEmail());
         	return "EmployeeDashboard";
         }
 	}

@@ -13,18 +13,19 @@ import com.bits.payroll.model.Employee;
 import com.bits.payroll.service.DashboardService;
 
 @Controller
-@SessionAttributes(value= {"employeeName","employeeId"})
+@SessionAttributes(value= {"employeeName","employeeEmail","employeeId"})
 public class DashboardController {
 	
 	@Autowired
 	DashboardService service;
 	
-	@RequestMapping(value="dashboard", method = RequestMethod.GET)
-	public String displayDashboard(ModelMap model) {
-		if(model.get("employeeId") == null)
+	@RequestMapping(value="EmployeeDashboard", method = RequestMethod.GET)
+	public String showEmployeeDashboard(ModelMap model) {
+		if(model.get("employeeName") == null)
 			return "home";
 		else
-			return "dashboard";
+			return "EmployeeDashboard";
+		
 	}
 	
 	@RequestMapping(value="viewSubordinates", method = RequestMethod.GET)

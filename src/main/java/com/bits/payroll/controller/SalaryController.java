@@ -15,7 +15,7 @@ import com.bits.payroll.model.Salary;
 import com.bits.payroll.service.SalaryService;
 
 @Controller
-@SessionAttributes(value= {"employeeName","employeeId"})
+@SessionAttributes(value= {"employeeName","employeeEmail","employeeId"})
 public class SalaryController {
 	
 	@Autowired

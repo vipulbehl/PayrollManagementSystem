@@ -19,7 +19,7 @@ import com.bits.payroll.model.Sex;
 import com.bits.payroll.service.AdminService;
 
 @Controller
-@SessionAttributes(value= {"employeeName","employeeEmail"})
+@SessionAttributes(value= {"employeeName","employeeEmail","employeeId"})
 public class AdminController {
 	
 	@Autowired

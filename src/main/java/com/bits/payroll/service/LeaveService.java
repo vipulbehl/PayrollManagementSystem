@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.bits.payroll.model.Employee;
 import com.bits.payroll.model.Leave;
-import com.bits.payroll.model.Salary;
 import com.bits.payroll.repository.EmployeeRepository;
 import com.bits.payroll.repository.LeaveRepository;
 
