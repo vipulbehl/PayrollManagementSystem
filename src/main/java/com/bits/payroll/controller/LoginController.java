@@ -30,7 +30,7 @@ public class LoginController {
         if (employee==null) {
         	model.addAttribute("err", "Invalid User Credentials!! Please type the credentials again");
         	//return "home";
-        	return "login2";
+        	return "home";
         }
         else {
         	model.addAttribute("employeeName", employee.getName());
@@ -46,6 +46,6 @@ public class LoginController {
 		  model.asMap().remove("employeeId");
 		  model.asMap().remove("employeeName");
 	  }
-	  return "redirect:login2?act=lo";
+	  return "redirect:home?act=lo";
 	}
 }

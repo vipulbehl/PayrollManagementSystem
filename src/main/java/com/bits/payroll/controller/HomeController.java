@@ -13,10 +13,10 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping(value="login2", method = RequestMethod.GET)
+	/*@RequestMapping(value="login2", method = RequestMethod.GET)
 	public String showLoginPage() {
 		return "login2";
-	}
+	}*/
 	
 	/*@RequestMapping(value="EmployeeDashboard", method = RequestMethod.GET)
 	public String showPanelPage() {

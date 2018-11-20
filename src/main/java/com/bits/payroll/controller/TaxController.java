@@ -83,7 +83,7 @@ public class TaxController {
 	@RequestMapping(value="panel-wells", method = RequestMethod.GET)
 	public String showTaxPage2(ModelMap model) {
 		if(model.get("employeeId") == null)
-			return "home";
+			return "login2";
 		else
 			return "panel-wells";
 		
