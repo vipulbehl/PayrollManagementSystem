@@ -72,7 +72,7 @@
 		<input type="submit" value="GenereateAnnualTaxReport">
 </form> -->
 	
-	<div class="row">
+	<div class="row"> 
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -81,18 +81,18 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    <form role="form" action="getSalary" method="POST" >
                                         <div class="form-group">
                                             <label>Enter Month</label>
-                                            <input class="form-control" placeholder="Enter Month in number">
+                                            <input class="form-control" type="number" name="month" placeholder="Enter Month in number">
                                             
                                         </div>
                                         <div class="form-group">
                                             <label>Enter Year</label>
-                                            <input class="form-control" placeholder="Enter year">
+                                            <input class="form-control" type="number" name="year" placeholder="Enter year">
                                         </div>
               
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
                                         
                                     </form>
                                 </div>
@@ -104,7 +104,37 @@
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
                             </div>
-                            <!-- /.row (nested) -->
+                            <!-- /.row (nested) --> 
+                            
+                            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Get Tax Details
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" action="getTax" method="POST">
+                                       
+                                        <div class="form-group">
+                                            <label>Enter Year</label>
+                                            <input class="form-control" type="number" name="year" placeholder="Enter year">
+                                        </div>
+              
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                   
+                                   
+                                   
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            
                         </div>
                         <!-- /.panel-body -->
                     </div>

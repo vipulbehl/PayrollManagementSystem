@@ -61,7 +61,7 @@ ${err}
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input type="submit" value="login">
+                                <input type="submit" class="btn btn-primary" value="Login">
                                
                             </fieldset>
                         </form>
@@ -95,7 +95,7 @@ ${err}
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input type="submit" value="adminDashboard">
+                                <input type="submit" class="btn btn-primary" value="Login">
                                
                             </fieldset>
                         </form>
