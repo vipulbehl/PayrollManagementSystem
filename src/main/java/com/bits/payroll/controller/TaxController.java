@@ -61,9 +61,9 @@ public class TaxController {
 		
 		//Showing tax benefit plans
 		if(salaryLeft<=300000)
-			model.addAttribute("status", "Low Quality Plan");
+			model.addAttribute("status", "From April 1, 2018 any LTCG made on transfer of equity MFs that have an equity exposure of 65 per cent or more including Equity-linked savings schemes (ELSS) will have to pay a 10 per cent tax on long-term gains. It is important to note that gains made above Rs 1 lakh per annum will only be subject to tax and any gains made below that limit in one FY remains tax-exempt. The LTCG made till January 31, 2018, however, remains grandfathered, i.e., those gains remains tax-exempt");
 		else if(salaryLeft>300000 && salaryLeft<=800000)
-			model.addAttribute("status", "Medium Quality Plan");
+			model.addAttribute("status", "Unit linked insurance plan (Ulip) is a hybrid product, a combo of protection and saving. It not only provides life insurance but also helps channel one's savings into various market-linked assets for meeting long-term goals. \r\n"	);
 		else
 			model.addAttribute("status", "High Quality Plan");
 		

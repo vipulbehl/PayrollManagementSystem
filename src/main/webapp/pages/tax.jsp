@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="tab-pane fade" id="settings-pills">
                                     <h4> Tax Plans</h4>
-                                    <p>Your Social Status is : ${status}</p>
+                                    <p>Tax Plan you should consider : ${status}</p>
                                 </div>
                             </div>
                         </div>
