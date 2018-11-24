@@ -74,7 +74,7 @@
 			</td></tr>
 			<tr><td style="padding-bottom:10px"><input name="managerId" class="form-control" placeholder="Manager Id" value="${emp.managerId}"></td></tr>
 			<tr><td style="padding-bottom:10px"><input name="leaveBalance" class="form-control" placeholder="Leave Balance" value="${emp.leaveBalance}"></td></tr>
-			<tr><td><input type="submit" name="submit" value="Add Employee"  class="btn btn-success"></td></tr>
+			<tr><td><input type="submit" name="submit" value="Update Employee"  class="btn btn-success"></td></tr>
 		</table>
 	</center>
 	</form>
