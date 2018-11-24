@@ -29,4 +29,9 @@ public class SalaryService {
 	public Employee getEmployeeById(Long id) {
 		return employeeRepository.getEmployeeById(id);
 	}
+	
+	public int totalSalary(Salary salary) {
+		int total = salary.getBasic()+salary.getDa()+salary.getHra()+salary.getTa()-salary.getPf();
+		return total;
+	}
 }

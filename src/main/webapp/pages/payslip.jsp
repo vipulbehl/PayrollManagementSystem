@@ -50,7 +50,7 @@
 					</ul>
 				</nav>
             </div>
-
+		<center>
 			<div class="col-lg-6">
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -84,10 +84,12 @@
 									</tr>
 								</tbody>
 							</table>
+							<b>Total Salary : ${totalSalary}</b>
 						</div>
 					</div>
 				</div>
 			</div>
+		</center>
 
         <!-- Core Scripts - Include with every page -->
 		<script src="js/jquery-1.10.2.js"></script>

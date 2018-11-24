@@ -36,6 +36,7 @@ public class SalaryController {
 		Month mon = Month.of(month);
 		Salary salary = service.getSalaryByMonth(mon,year,employee);
 		model.addAttribute("salary", salary);
+		model.addAttribute("totalSalary", service.totalSalary(salary));
 		return "payslip";
 		
 	}
