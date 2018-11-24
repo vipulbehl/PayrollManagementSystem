@@ -31,7 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Employee Tax Report</a>
+                <a class="navbar-brand" href="EmployeeDashboard">Employee Tax Report</a>
             </div>
             <!-- /.navbar-header -->
 

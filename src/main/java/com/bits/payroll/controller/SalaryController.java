@@ -22,12 +22,12 @@ public class SalaryController {
 	SalaryService service;
 	
 	@RequestMapping(value="salary", method = RequestMethod.GET)
-	public String showHomePage() {
+	public String showSalaryPage() {
 		return "salary";
 	}
 	
 	
-	@RequestMapping(value="getSalary", method = RequestMethod.POST)
+	@RequestMapping(value="payslip", method = RequestMethod.POST)
 	public String getSalary(ModelMap model, @RequestParam int month, @RequestParam int year) {
 	
 		System.out.println(month);
@@ -36,7 +36,8 @@ public class SalaryController {
 		Month mon = Month.of(month);
 		Salary salary = service.getSalaryByMonth(mon,year,employee);
 		model.addAttribute("salary", salary);
-		return "salary";
+		model.addAttribute("totalSalary", service.totalSalary(salary));
+		return "payslip";
 		
 	}
 
