@@ -57,21 +57,7 @@
             <!-- /.navbar-top-links -->
 
         </nav>
-        
-<!--  --<form action="getSalary" method="POST">
-		Month: <input type="number" name="month"> <br>
-		Year: <input type="number" name="year"> <br>
-		
-		<input type="submit" value="getsalary">
-</form>
-	
-	<br><br><br>
-	
-	<form action="getTax" method="POST">
-		Year: <input type="number" name="year"> <br>
-		<input type="submit" value="GenereateAnnualTaxReport">
-</form> -->
-	
+
 	<div class="row"> 
                 <div class="col-lg-12">
                     <div class="panel panel-default">
@@ -81,7 +67,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form" action="getSalary" method="POST" >
+                                    <form role="form" action="payslip" method="POST" >
                                         <div class="form-group">
                                             <label>Enter Month</label>
                                             <input class="form-control" type="number" name="month" placeholder="Enter Month in number">
@@ -142,8 +128,6 @@
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-	
-	${salary}
 	
 	<!-- Core Scripts - Include with every page -->
     <script src="js/jquery-1.10.2.js"></script>
