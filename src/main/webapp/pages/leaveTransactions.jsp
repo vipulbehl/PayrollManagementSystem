@@ -66,6 +66,7 @@
 									<th>Leave Start Date</th>
 									<th>Leave End Date</th>
 									<th>Number of Leaves</th>
+									<th>Leave Balance</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -74,6 +75,7 @@
 										<td>${leave.startDate}</td>
 										<td>${leave.endDate}</td>
 										<td>${leave.numberLeaves}</td>
+										<td>${leave.employee.leaveBalance}</td>
 									</tr>
 								</c:forEach>
 							</tbody>
